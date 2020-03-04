@@ -119,6 +119,10 @@ footer {
     border-top: 1px solid #555;
 }
 
+footer a {
+    color: white;
+}
+
 header,
 footer {
   background-color: #222;
@@ -127,7 +131,6 @@ footer {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding-left: 20px;
 }
 
 main {
@@ -181,12 +184,25 @@ main {
   line-height: 1.5em;
   font-size: .8em;
   background-color: #222;
-  width: 30%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0px;
+  margin: 20px 0px;
+  padding-bottom: 20px;
+}
+
+.div-1, .div-2 {
+    border-bottom: 1px solid #555;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+}
+
+.social-icons {
+    display: none;
 }
 
 /* ==========================================================================
@@ -269,9 +285,26 @@ main {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (max-width: 768px) {
-    body {
-      padding: 1em;
+@media all and (min-width: 768px) {
+     .flex-items {
+        width: 30%;
+        margin: 40px 0px;
+    }
+
+    .div-1, .div-2 {
+        border-bottom: none;
+    }
+
+    .copyright {
+        width: 75%;
+        text-align: left;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        text-align: right;
     }
 }
 
@@ -279,12 +312,19 @@ main {
     .div-1, .div-2 {
         border-right: 1px solid #555;
         padding-right: 30px;
+        border-bottom: none;
+    }
+
+    .flex-items {
+        width: 30%;
+        margin: 40px 0px;
+    }
+
+    footer .social-icons {
+        align-items: right;
     }
   }
 
-  #div-3 {
-    /* set your flex value to 1 100% */
-  }
 }
 
 @media print,
